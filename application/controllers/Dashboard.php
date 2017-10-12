@@ -69,4 +69,23 @@ class Dashboard extends CI_Controller {
     		);
     	$this->load->view('view_edit_barang', $data);
     }
+    public function ditawar(){
+        $id_user = $this->session->userdata('login')['id'];
+        $jenis_user = $this->session->userdata('login')['type'];
+        switch ($jenis_user) {
+            case 'penawar':
+                $username = $this->UserModel->getByParam('penawar_tabel', array('id_penawar'=>$id_user));
+                $barang = $this->GeneralModel->getPenawaran($id_user);
+                $data = array(
+                    'username'=> $username[0]['username'],
+                    'barang' => $barang,
+                    );
+                $this->load->view('view_penawar_tawaran', $data);
+                break;
+            
+            case 'pelelang':
+                # code...
+                break;
+        }
+    }
 }
