@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PT LELI</title>
+    <title>PT LELI Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">

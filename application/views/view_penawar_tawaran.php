@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Penawar Barang</title>
+    <title>Barang Tawaran</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -64,11 +64,11 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li  class="active">
-                        <a href="#"> Lelang</a>
+                    <li>
+                        <a href="<?= base_url()?>dashboard/"> Lelang</a>
                     </li>
-                     <li>
-                        <a href="<?= base_url()?>dashboard/ditawar"> Ditawar</a>
+                     <li  class="active">
+                        <a href="#"> Ditawar</a>
                     </li>
                 </ul>
             </div>

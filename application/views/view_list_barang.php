@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Barang Pelelang</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
