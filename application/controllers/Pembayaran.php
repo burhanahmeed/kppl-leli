@@ -12,22 +12,27 @@ class Pembayaran extends CI_Controller {
         }
     }
 	public function doPay($idbarang){
+		$id_user = $this->session->userdata('login')['id'];
 		$table = 'dompet_tabel';
 		$data = array(
-			'jumlah' => $this->highestOffer($idbarang)['tawaran'],
+			'id_user'=>$id_user,
+			'jumlah' => $this->highestOffer($idbarang),
 			'jenis' => 'minus'
 			);
-		$amount = $this->myAmount($id);
+		$amount = $this->myAmount($id_user);
+		// var_dump((float)$amount < (float)$this->highestOffer($idbarang));
+		// var_dump($amount);
+		// var_dump($this->highestOffer($idbarang));
+		// var_dump($id_user);
 		// cek ketersediaan uang
-		if ((float)$amount < (float)$this->highestOffer($idbarang)['tawaran']) {
+		if ((float)$amount < (float)$this->highestOffer($idbarang)) {
 			// error
-			return false;
-			redirect('/');
+			echo 'gagal membayar';
 		}else{
 			$this->GeneralModel->create($table, $data);
-			return true;
-			redirect('dashboard');
+			echo 'berhasil membayar';
 		}
+		// redirect('dashboard');
 	}
 	public function myAmount($id){
 		$tambah = 'SELECT SUM(jumlah) AS jumlh FROM dompet_tabel WHERE id_user="'.$id.'" AND jenis="plus";';
@@ -38,8 +43,8 @@ class Pembayaran extends CI_Controller {
 		return $amount;
 	}
 	public function highestOffer($idbarang){
-		$sql = 'SELECT MAX(tawaran) AS tawaran FROM penawaran_tabel WHERE id_barang="'.$idbarang.'";';
+		$sql = 'SELECT MAX(tawaran) AS jumlh FROM penawaran_tabel WHERE id_barang="'.$idbarang.'";';
 		$result = $this->GeneralModel->query($sql);
-		return $result;
+		return $result[0]['jumlh'];
 	}
 }

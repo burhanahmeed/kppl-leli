@@ -22,10 +22,12 @@ class Dompet extends CI_Controller {
 
 		if ($this->form_validation->run()) {
 			$this->GeneralModel->create($table, $data);
+			// echo 'berhasil';
 			redirect('dompet');
 		}else{
 			echo 'deposit gagal';
 		}
+		// var_dump($this->GeneralModel->create($table, $data));
 	}
 	public function withdrawal(){
 		$this->form_validation->set_rules('input_money', 'Jumlah penarikan','required|numeric');
@@ -43,11 +45,11 @@ class Dompet extends CI_Controller {
 				$this->GeneralModel->create($table, $data);
 				redirect('dompet');
 			}else{
-				echo "withdrawal gagal";	
+				echo "withdrawal gagal, uang tidak cukup";	
 			}
 		}else{
 			echo "withdrawal gagal";
-			echo validation_errors();
+			// echo validation_errors();
 		}
 	}
 

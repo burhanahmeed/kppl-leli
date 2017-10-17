@@ -29,28 +29,29 @@ class Barang extends CI_Controller {
 				);
 			$this->GeneralModel->create($table, $dataInserted);
 			// success
-			echo 'berhasil';
+			// echo 'berhasil';
+			redirect('dashboard');
 		}else{
 			// error
-			echo 'gagal';
+			echo 'gagal menambahkan barang';
 		}
 	}
-	public function view(){
-		$field = array();
-		$table = 'barang_tabel';
-		$itemGetter = $this->GeneralModel->getItem($field,$table);
+	// public function view(){
+	// 	$field = array();
+	// 	$table = 'barang_tabel';
+	// 	$itemGetter = $this->GeneralModel->getItem($field,$table);
 
-	}
-	public function listAll(){
-		$field = array();
-		$table = 'barang_tabel';
-		$itemGetter = $this->GeneralModel->getItem($field,$table);
-	}
-	public function getById(){
-		$field = array();
-		$table = 'barang_tabel';
-		$itemGetter = $this->GeneralModel->getByParam($table, $where);
-	}
+	// }
+	// public function listAll(){
+	// 	$field = array();
+	// 	$table = 'barang_tabel';
+	// 	$itemGetter = $this->GeneralModel->getItem($field,$table);
+	// }
+	// public function getById(){
+	// 	$field = array();
+	// 	$table = 'barang_tabel';
+	// 	$itemGetter = $this->GeneralModel->getByParam($table, $where);
+	// }
 	public function update($id){
 		$this->form_validation->set_rules('nBarang', 'Nama Barang', 'required');
 		$this->form_validation->set_rules('detBarang', 'Detail Barang', 'required|min_length[6]');

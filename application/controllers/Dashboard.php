@@ -45,9 +45,9 @@ class Dashboard extends CI_Controller {
     	$jenis_user = $this->session->userdata('login')['type'];
     	$id_user = $this->session->userdata('login')['id'];
     	switch ($jenis_user) {
-    		case 'penawar':
-    			$username = $this->UserModel->getByParam('penawar_tabel', array('id_penawar'=>$id_user));
-    			break;
+    		// case 'penawar':
+    		// 	$username = $this->UserModel->getByParam('penawar_tabel', array('id_penawar'=>$id_user));
+    		// 	break;
     		
     		case 'pelelang':
     			$username = $this->UserModel->getByParam('pelelang_tabel', array('id_pelelang'=>$id_user));
@@ -83,9 +83,9 @@ class Dashboard extends CI_Controller {
                 $this->load->view('view_penawar_tawaran', $data);
                 break;
             
-            case 'pelelang':
-                # code...
-                break;
+            // case 'pelelang':
+            //     # code...
+            //     break;
         }
     }
 }

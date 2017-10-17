@@ -1,4 +1,4 @@
-	<?php
+<?php
 /**
  * Part of ci-phpunit-test
  *
@@ -8,8 +8,8 @@
  * @link       https://github.com/kenjis/ci-phpunit-test
  */
 
-class User_test extends TestCase
-{
+
+class User_test extends TestCase{
 	public function setUp()
     {
         $this->resetInstance();
@@ -95,6 +95,4 @@ class User_test extends TestCase
        $out= $this->request('GET', 'user/method_not_exist');
         $this->assertResponseCode(404);
     }
-
 }
-

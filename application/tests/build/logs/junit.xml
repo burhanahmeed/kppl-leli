@@ -1,8 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="1" assertions="1" failures="0" errors="0" time="0.061466">
-    <testsuite name="User_test" file="C:\xampp\htdocs\kppl-leli\application\tests\controllers\User_test.php" fullPackage="User" tests="1" assertions="1" failures="0" errors="0" time="0.061466">
-      <testcase name="test_login" class="User_test" file="C:\xampp\htdocs\kppl-leli\application\tests\controllers\User_test.php" line="17" assertions="1" time="0.061466"/>
+  <testsuite name="CodeIgniter Application Test Suite" tests="58" assertions="72" failures="0" errors="0" time="2.008617">
+    <testsuite name="Admin_test" file="/var/www/html/kppl-leli/application/tests/controllers/Admin_test.php" fullPackage="Admin" tests="1" assertions="1" failures="0" errors="0" time="0.018754">
+      <testcase name="test_index" class="Admin_test" file="/var/www/html/kppl-leli/application/tests/controllers/Admin_test.php" line="5" assertions="1" time="0.018754"/>
+    </testsuite>
+    <testsuite name="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" fullPackage="Barang" tests="6" assertions="10" failures="0" errors="0" time="0.215593">
+      <testcase name="test_index" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="5" assertions="2" time="0.121854"/>
+      <testcase name="test_index_gagal" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="16" assertions="1" time="0.024234"/>
+      <testcase name="test_nosess" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="26" assertions="2" time="0.015498"/>
+      <testcase name="test_update" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="34" assertions="2" time="0.021892"/>
+      <testcase name="test_update_fail" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="44" assertions="1" time="0.016718"/>
+      <testcase name="test_hapus" class="Barang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Barang_test.php" line="54" assertions="2" time="0.015397"/>
+    </testsuite>
+    <testsuite name="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" fullPackage="Dashboard" tests="7" assertions="8" failures="0" errors="0" time="0.164612">
+      <testcase name="test_nosession" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="5" assertions="2" time="0.015955"/>
+      <testcase name="test_index_penawar" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="10" assertions="1" time="0.023633"/>
+      <testcase name="test_index_pelelang" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="16" assertions="1" time="0.041738"/>
+      <testcase name="test_halaman_withdrawal" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="22" assertions="1" time="0.019382"/>
+      <testcase name="test_tambah_barang_pelelang" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="28" assertions="1" time="0.019837"/>
+      <testcase name="test_halama_edit" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="34" assertions="1" time="0.020965"/>
+      <testcase name="test_ditawar" class="Dashboard_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dashboard_test.php" line="40" assertions="1" time="0.023102"/>
+    </testsuite>
+    <testsuite name="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" fullPackage="Dompet" tests="8" assertions="8" failures="0" errors="0" time="0.330043">
+      <testcase name="test_add" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="9" assertions="1" time="0.102062"/>
+      <testcase name="test_add_fail" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="19" assertions="1" time="0.028451"/>
+      <testcase name="test_withdrawal" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="27" assertions="1" time="0.063845"/>
+      <testcase name="test_withdrawal_fail" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="36" assertions="1" time="0.028553"/>
+      <testcase name="test_withdrawal_fail_overwithdraw" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="45" assertions="1" time="0.028701"/>
+      <testcase name="test_index_penawar" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="54" assertions="1" time="0.028186"/>
+      <testcase name="test_index_pelelang" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="60" assertions="1" time="0.028255"/>
+      <testcase name="test_index_nosess" class="Dompet_test" file="/var/www/html/kppl-leli/application/tests/controllers/Dompet_test.php" line="66" assertions="1" time="0.021990"/>
+    </testsuite>
+    <testsuite name="Lelang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Lelang_test.php" fullPackage="Lelang" tests="1" assertions="1" failures="0" errors="0" time="0.014514">
+      <testcase name="test_tawaran" class="Lelang_test" file="/var/www/html/kppl-leli/application/tests/controllers/Lelang_test.php" line="4" assertions="1" time="0.014514"/>
+    </testsuite>
+    <testsuite name="Pembayaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Pembayaran_test.php" fullPackage="Pembayaran" tests="3" assertions="3" failures="0" errors="0" time="0.102723">
+      <testcase name="test_bayar" class="Pembayaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Pembayaran_test.php" line="5" assertions="1" time="0.017206"/>
+      <testcase name="test_bayar_sukses" class="Pembayaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Pembayaran_test.php" line="14" assertions="1" time="0.069079"/>
+      <testcase name="test_bayar_nosess" class="Pembayaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Pembayaran_test.php" line="23" assertions="1" time="0.016438"/>
+    </testsuite>
+    <testsuite name="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" fullPackage="Penawaran" tests="6" assertions="6" failures="0" errors="0" time="0.188707">
+      <testcase name="test_tawar" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="4" assertions="1" time="0.054350"/>
+      <testcase name="test_tawar_fails" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="11" assertions="1" time="0.020666"/>
+      <testcase name="test_tawar_fails_pernah_bid" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="18" assertions="1" time="0.021005"/>
+      <testcase name="test_withdraw" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="25" assertions="1" time="0.057374"/>
+      <testcase name="test_withdraw_fails" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="30" assertions="1" time="0.018389"/>
+      <testcase name="test_index_nosess" class="Penawaran_test" file="/var/www/html/kppl-leli/application/tests/controllers/Penawaran_test.php" line="35" assertions="1" time="0.016923"/>
+    </testsuite>
+    <testsuite name="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" fullPackage="User" tests="16" assertions="25" failures="0" errors="0" time="0.610391">
+      <testcase name="test_login" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="17" assertions="1" time="0.025011"/>
+      <testcase name="test_signup" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="22" assertions="1" time="0.022917"/>
+      <testcase name="test_doLogin_penawar" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="27" assertions="2" time="0.040947"/>
+      <testcase name="test_doLogin_penawar_fail" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="37" assertions="1" time="0.041284"/>
+      <testcase name="test_doLogin_penawar_blank" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="42" assertions="1" time="0.025146"/>
+      <testcase name="test_doLogin_pelelang" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="47" assertions="2" time="0.041423"/>
+      <testcase name="test_doLogin_pelelang_fail" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="52" assertions="1" time="0.040834"/>
+      <testcase name="test_doLogin_admin" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="57" assertions="2" time="0.040984"/>
+      <testcase name="test_doLogin_admin_fail" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="62" assertions="1" time="0.040454"/>
+      <testcase name="test_login_fail_blank_field" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="67" assertions="2" time="0.024799"/>
+      <testcase name="test_signup_new" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="74" assertions="2" time="0.124986"/>
+      <testcase name="test_signup_new_pelelang" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="78" assertions="2" time="0.034516"/>
+      <testcase name="test_signup_new_lelang_error" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="82" assertions="2" time="0.031453"/>
+      <testcase name="test_signup_error" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="86" assertions="2" time="0.030027"/>
+      <testcase name="test_logout" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="90" assertions="2" time="0.023786"/>
+      <testcase name="test_method_404" class="User_test" file="/var/www/html/kppl-leli/application/tests/controllers/User_test.php" line="94" assertions="1" time="0.021824"/>
+    </testsuite>
+    <testsuite name="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" fullPackage="GeneralModel" tests="6" assertions="5" failures="0" errors="0" time="0.226994">
+      <testcase name="test_create_true" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="16" assertions="1" time="0.111531"/>
+      <testcase name="test_getItem" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="28" assertions="1" time="0.018147"/>
+      <testcase name="test_getParam" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="33" assertions="1" time="0.017553"/>
+      <testcase name="test_query" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="41" assertions="1" time="0.016223"/>
+      <testcase name="test_update" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="46" assertions="0" time="0.044021"/>
+      <testcase name="test_getPenawaran" class="GeneralModel_test" file="/var/www/html/kppl-leli/application/tests/models/GeneralModel_test.php" line="49" assertions="1" time="0.019519"/>
+    </testsuite>
+    <testsuite name="UserModel_test" file="/var/www/html/kppl-leli/application/tests/models/UserModel_test.php" fullPackage="UserModel" tests="4" assertions="5" failures="0" errors="0" time="0.136286">
+      <testcase name="test_view" class="UserModel_test" file="/var/www/html/kppl-leli/application/tests/models/UserModel_test.php" line="9" assertions="2" time="0.016469"/>
+      <testcase name="test_create_true" class="UserModel_test" file="/var/www/html/kppl-leli/application/tests/models/UserModel_test.php" line="16" assertions="1" time="0.085400"/>
+      <testcase name="test_auth" class="UserModel_test" file="/var/www/html/kppl-leli/application/tests/models/UserModel_test.php" line="28" assertions="1" time="0.017195"/>
+      <testcase name="test_getParam" class="UserModel_test" file="/var/www/html/kppl-leli/application/tests/models/UserModel_test.php" line="36" assertions="1" time="0.017222"/>
     </testsuite>
   </testsuite>
 </testsuites>

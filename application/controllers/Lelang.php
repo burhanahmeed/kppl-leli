@@ -14,8 +14,8 @@ class Lelang extends CI_Controller {
 		
 	// }
 	public function highestOffer($idbarang){
-		$sql = 'SELECT MAX(tawaran) AS tawaran FROM penawaran_tabel WHERE id_barang="'.$idbarang.'";';
-		$result = $this->GeneralModel->query($sql);
-		return $result;
+		$sql = 'SELECT MAX(tawaran) AS jumlh FROM penawaran_tabel WHERE id_barang="'.$idbarang.'";';
+		$result = $this->GeneralModel->query($sql);	
+		echo $result[0]['jumlh'];
 	}
 }
