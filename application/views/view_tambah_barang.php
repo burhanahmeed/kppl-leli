@@ -80,14 +80,14 @@
         <form action="<?= base_url()?>barang/add" method="post" enctype="multipart/form-data">
     		<div class="form-group">
     			</br>
-                <div class="col-lg-4"><input class="form-control" placeholder="Nama Barang" name="nBarang"></div>
+                <div class="col-lg-4"><input class="form-control" placeholder="Nama Barang" name="nBarang" required=""></div>
     			<input type="file" name="file">
     			<label>Upload gambar</label><br>
-                <label>Harga Awal</label><input type="number" name="hargaAwal">
+                <label>Harga Awal</label><input type="number" name="hargaAwal" required="">
                 
             </div>
     		<div class="form-group">
-                <div class="col-lg-10"><textarea name="detBarang" class="form-control" rows="8" placeholder="Detil Barang"></textarea></div>
+                <div class="col-lg-10"><textarea name="detBarang" class="form-control" rows="8" placeholder="Detil Barang" required=""></textarea></div>
             </div>
 
     		<div class="container">

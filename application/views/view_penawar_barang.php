@@ -68,7 +68,7 @@
                         <a href="#"> Lelang</a>
                     </li>
                      <li>
-                        <a href="<?= base_url()?>dashboard/ditawar"> Ditawar</a>
+                        <!-- <a href="<?= base_url()?>dashboard/ditawar"> Ditawar</a> -->
                     </li>
                 </ul>
             </div>

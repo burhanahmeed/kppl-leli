@@ -24,9 +24,14 @@ class Barang extends CI_Controller {
 				'detail' => $this->input->post('detBarang'),
 				'harga_awal' => $this->input->post('hargaAwal'),
 				'deadline' => $this->input->post('dates'),
-				'gambar' => base_url().'assets/images/'.$this->upload('file'),
+				// 'gambar' => base_url().'assets/images/'.$this->upload('file'),
 				'status' => 'Belum Tervalidasi',
 				);
+			if ($this->upload('file')) {
+				$dataInserted['gambar'] = base_url().'assets/images/'.$this->upload('file');
+			}else{
+				$dataInserted['gambar'] = '';
+			}
 			$this->GeneralModel->create($table, $dataInserted);
 			// success
 			// echo 'berhasil';
@@ -65,8 +70,13 @@ class Barang extends CI_Controller {
 				'detail' => $this->input->post('detBarang'),
 				'harga_awal' => $this->input->post('hargaAwal'),
 				'deadline' => $this->input->post('dates'),
-				'gambar' => base_url().'assets/images/'.$this->upload('file')
+				// 'gambar' => base_url().'assets/images/'.$this->upload('file')
 				);
+			if ($this->upload('file')) {
+				$data['gambar'] = base_url().'assets/images/'.$this->upload('file');
+			}else{
+				$data['gambar'] = '';
+			}
 			$this->GeneralModel->update($table,$where, $data);
 			redirect('dashboard');
 			// success
@@ -91,6 +101,10 @@ class Barang extends CI_Controller {
 				'file_name'=>'GALERI_'.rand(0,10000000));
 		$this->upload->initialize($config);
 		$do = $this->upload->do_upload($nama);
-		return $this->upload->data('file_name');
+		if (!$do) {
+			return false;
+		}else{
+			return $this->upload->data('file_name');
+		}
 	}
 }

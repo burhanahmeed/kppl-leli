@@ -81,6 +81,7 @@ if ($this->session->flashdata('error')) {
                     <input type="submit" value="Sign in">
                 </form>
             </div>
+            <a class="btn btn-default" href="<?= base_url()?>user/signup">Daftar</a>
         </div>
         <!--//main-->
         <!--footer-->
